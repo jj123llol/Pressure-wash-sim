@@ -1,0 +1,135 @@
+function teleportTO(placeCFrame)
+    local plyr = game.Players.LocalPlayer;
+    if plyr.Character then
+        plyr.Character.HumanoidRootPart.CFrame = placeCFrame;
+    end
+end
+
+
+getgenv().AutoFill = true;
+getgenv().AutoGet = true;
+
+
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "pressure wash sim--by jude/rev", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Announcements",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("Announcements and shit","Am I really bringing this shit back?,oh well enjoy fuck-tards")
+
+
+
+
+
+
+
+-- actual Shit
+
+
+local Tab = Window:MakeTab({
+	Name = "AutoFarm",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddButton({
+	Name = "Get inf money",
+	Callback = function()
+      			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(21.8601322, 34.5334625, 167.433884, 0.0850360021, -1.50981005e-08, 0.996377885, 8.93677878e-08, 1, 7.52588125e-09, -0.996377885, 8.84041143e-08, 0.0850360021)
+      			wait(1)
+
+local args = {
+    [1] = 47802972793579.1,
+    [2] = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+}
+
+game:GetService("ReplicatedStorage").Remotes.SurfaceCompleted:FireServer(unpack(args))
+
+  	end    
+})
+
+Tab:AddToggle({
+	Name = "Auto get money",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().AutoGet = bool
+		print(bool)
+		if bool then
+		AutoGet()
+		end
+	end    
+    
+})
+
+
+
+Tab:AddToggle({
+	Name = "Auto fill water",
+	Default = (bool),
+	Callback = function(bool)
+		getgenv().AutoFill = bool
+		print(bool)
+		if bool then
+		AutoFill()
+		end
+	end    
+    
+})
+
+
+
+
+
+
+
+
+
+function AutoGet()
+    while getgenv().AutoGet == true do
+ wait()
+ 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(21.8601322, 34.5334625, 167.433884, 0.0850360021, -1.50981005e-08, 0.996377885, 8.93677878e-08, 1, 7.52588125e-09, -0.996377885, 8.84041143e-08, 0.0850360021)
+ 	
+local args = {
+    [1] = 47802972793579.1,
+    [2] = 999999
+}
+
+game:GetService("ReplicatedStorage").Remotes.SurfaceCompleted:FireServer(unpack(args))
+
+
+
+end
+
+end
+function AutoFill()
+    while  getgenv().AutoFill== true do
+
+
+local args = {
+    [1] = true
+}
+
+game:GetService("ReplicatedStorage").Remotes.RefillRemote:FireServer(unpack(args))
+wait(1)
+
+local args = {
+    [1] = false
+}
+
+game:GetService("ReplicatedStorage").Remotes.RefillRemote:FireServer(unpack(args))
+
+
+
+
+end
+end
+        
+        
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/jj123llol/My-personal-admin/main/admin",true))()
+	
